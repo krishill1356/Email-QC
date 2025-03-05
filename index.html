@@ -27,6 +27,46 @@
             margin-bottom: 10px;
         }
         
+        /* Add navigation bar styles */
+        .nav-bar {
+            background-color: #001689;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-bar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-bar li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-bar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-bar a:hover {
+            background-color: #0031c6;
+        }
+        
+        .nav-bar a.active {
+            background-color: #ff7b23;
+            color: white;
+        }
+        
+        /* Rest of your existing styles */
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -41,195 +81,7 @@
             margin-bottom: 25px;
         }
         
-        h1, h2, h3, h4 {
-            color: #001689;
-            font-weight: 600;
-        }
-        
-        h1 {
-            text-align: center;
-            margin-top: 0;
-            font-size: 24px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #001689;
-        }
-        
-        input[type="text"] {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        
-        textarea {
-            width: 100%;
-            height: 200px;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            resize: vertical;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        
-        button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #ff7b23;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        
-        button:hover {
-            background-color: #e56200;
-        }
-        
-        .button-container {
-            text-align: center;
-        }
-        
-        .results-section {
-            display: none;
-        }
-        
-        .score-display {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin: 20px 0 30px;
-        }
-        
-        .score-circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: #f0f7ff;
-            border: 5px solid #001689;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .score-number {
-            font-size: 42px;
-            font-weight: bold;
-            color: #001689;
-        }
-        
-        .score-label {
-            font-size: 18px;
-            color: #555;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .category-score {
-            background: #f0f7ff;
-            padding: 8px 15px;
-            border-radius: 20px;
-            color: #001689;
-            font-weight: 600;
-        }
-        
-        .category-section {
-            margin-bottom: 25px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-        }
-        
-        .category-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .feedback-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .feedback-item {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            border-left: 4px solid #ddd;
-        }
-        
-        .feedback-title {
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #333;
-        }
-        
-        .example {
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 4px;
-            font-family: monospace;
-            margin: 10px 0;
-            font-size: 14px;
-            white-space: pre-wrap;
-        }
-        
-        .recommendation {
-            background-color: #e8f4ff;
-            padding: 10px;
-            border-radius: 4px;
-            margin: 10px 0;
-            border-left: 4px solid #4a90e2;
-        }
-        
-        .good {
-            border-left-color: #27ae60;
-        }
-        
-        .warning {
-            border-left-color: #f39c12;
-        }
-        
-        .error {
-            border-left-color: #e74c3c;
-        }
-        
-        .summary-section {
-            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
-            padding: 20px;
-            border-radius: 5px;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 14px;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            .card {
-                padding: 15px;
-            }
-        }
+        /* Your other existing styles */
     </style>
 </head>
 <body>
@@ -237,685 +89,105 @@
         <img src="/Email-QC/ATC.png" alt="Air Travel Claim Logo" class="logo">
     </div>
     
+    <!-- Add navigation bar -->
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html" class="active">Email QC Tool</a></li>
+            <li><a href="reporting.html">Performance Reports</a></li>
+        </ul>
+    </nav>
+    
     <div class="container">
         <div class="card">
             <h1>Email Quality Assessment Tool</h1>
             
+            <!-- Rest of your existing content -->
             <div class="input-section">
-                <label for="agent-name">Agent Name:</label>
-                <input type="text" id="agent-name" placeholder="Enter agent's name">
-                
-                <label for="email-content">Email Content:</label>
-                <textarea id="email-content" placeholder="Copy and paste the entire email here..."></textarea>
-                
-                <div class="button-container">
-                    <button id="qc-button">Analyse Email Quality</button>
-                </div>
+                <!-- Your existing form fields -->
             </div>
         </div>
         
-        <div id="results" class="results-section">
-            <div class="card">
-                <h2>Quality Assessment Results</h2>
-                
-                <div class="score-display">
-                    <div class="score-circle">
-                        <span class="score-number" id="total-score">0</span>
-                    </div>
-                    <div class="score-label">out of 10</div>
-                </div>
-                
-                <div class="category-section">
-                    <div class="category-header">
-                        <h3>Content Quality</h3>
-                        <div class="category-score" id="content-score">0/3</div>
-                    </div>
-                    <ul class="feedback-list" id="content-feedback"></ul>
-                </div>
-                
-                <div class="category-section">
-                    <div class="category-header">
-                        <h3>Structure</h3>
-                        <div class="category-score" id="structure-score">0/3</div>
-                    </div>
-                    <ul class="feedback-list" id="structure-feedback"></ul>
-                </div>
-                
-                <div class="category-section">
-                    <div class="category-header">
-                        <h3>Technical Quality</h3>
-                        <div class="category-score" id="technical-score">0/2</div>
-                    </div>
-                    <ul class="feedback-list" id="technical-feedback"></ul>
-                </div>
-                
-                <div class="category-section">
-                    <div class="category-header">
-                        <h3>Professionalism</h3>
-                        <div class="category-score" id="professional-score">0/2</div>
-                    </div>
-                    <ul class="feedback-list" id="professional-feedback"></ul>
-                </div>
-            </div>
-            
-            <div class="card summary-section">
-                <h3>Summary & Recommendations</h3>
-                <div id="overall-feedback"></div>
-                <div id="recommendations"></div>
-            </div>
-        </div>
+        <!-- Rest of your existing code -->
     </div>
     
     <footer>
         <p>Email Quality Assessment Tool &copy; 2023 Air Travel Claim</p>
     </footer>
 
+    <!-- Your existing script -->
     <script>
-        document.getElementById('qc-button').addEventListener('click', function() {
-            // Get values
-            const agentName = document.getElementById('agent-name').value;
-            const emailContent = document.getElementById('email-content').value;
-            
-            if (!agentName || !emailContent) {
-                alert('Please enter both agent name and email content');
-                return;
-            }
-            
-            // Show results section
-            document.getElementById('results').style.display = 'block';
-            
-            // Smooth scroll to results
-            document.getElementById('results').scrollIntoView({
-                behavior: 'smooth'
-            });
-            
-            // Perform the assessment
-            assessEmail(emailContent, agentName);
-        });
+        // Your existing JavaScript
         
-        function assessEmail(emailContent, agentName) {
-            // SCORING WEIGHTS (out of 10 total points)
-            // Content Quality: 3 points
-            // Structure: 3 points
-            // Technical Quality: 2 points
-            // Professionalism: 2 points
-            
-            // Parse the email content
-            const lines = emailContent.split('\n');
-            const emailLower = emailContent.toLowerCase();
-            
-            // Function to extract a snippet from email (for examples)
-            function extractSnippet(pattern, context = 20) {
-                const match = emailContent.match(pattern);
-                if (!match) return null;
-                
-                const startPos = Math.max(0, match.index - context);
-                const endPos = Math.min(emailContent.length, match.index + match[0].length + context);
-                
-                return emailContent.substring(startPos, endPos);
+        // Add this to save QC data for reporting
+        function saveQcResult() {
+            if(document.getElementById('results').style.display === 'none') {
+                return; // Assessment not completed
             }
             
-            // CONTENT QUALITY ASSESSMENT (3 points)
-            let contentScore = 0;
-            let contentFeedback = [];
+            const agentName = document.getElementById('agent-name').value;
+            const email = document.getElementById('email-content').value;
             
-            // Check for clarity
-            const longSentences = lines.filter(line => line.length > 100);
-            if (longSentences.length > 0) {
-                const example = longSentences[0].substring(0, 100) + '...';
-                const suggestion = longSentences[0].split(', ').join('.\n');
-                
-                contentFeedback.push(`
-                    <li class="feedback-item warning">
-                        <div class="feedback-title">Overly long sentences reduce clarity</div>
-                        <p>Your email contains ${longSentences.length} sentences that are too long, which can make your message difficult to understand.</p>
-                        <div class="example">${example}</div>
-                        <div class="recommendation">
-                            <strong>Recommendation:</strong> Break long sentences into shorter ones for better readability:
-                            <div class="example">${suggestion}</div>
-                        </div>
-                    </li>
-                `);
-            } else {
-                contentScore += 1;
-                contentFeedback.push(`
-                    <li class="feedback-item good">
-                        <div class="feedback-title">Good sentence length for clarity</div>
-                        <p>Your sentences are appropriately sized, which enhances readability and understanding.</p>
-                    </li>
-                `);
-            }
+            // Get scores
+            const totalScore = parseInt(document.getElementById('total-score').textContent);
+            const contentScore = parseFloat(document.getElementById('content-score').textContent.split('/')[0]);
+            const structureScore = parseFloat(document.getElementById('structure-score').textContent.split('/')[0]);
+            const technicalScore = parseFloat(document.getElementById('technical-score').textContent.split('/')[0]);
+            const professionalScore = parseFloat(document.getElementById('professional-score').textContent.split('/')[0]);
             
-            // Check for conciseness
-            if (emailContent.length > 1500) {
-                const wordsToRemove = ['actually', 'basically', 'certainly', 'just', 'really', 'simply', 'quite'];
-                const hasUnnecessaryWords = wordsToRemove.some(word => 
-                    new RegExp('\\b' + word + '\\b', 'i').test(emailLower)
-                );
-                
-                let example = '';
-                let recommendation = 'Consider removing filler words and consolidating information.';
-                
-                if (hasUnnecessaryWords) {
-                    const unnecessaryWord = wordsToRemove.find(word => 
-                        new RegExp('\\b' + word + '\\b', 'i').test(emailLower)
-                    );
-                    example = extractSnippet(new RegExp(`\\b${unnecessaryWord}\\b`, 'i'));
-                    
-                    if (example) {
-                        recommendation = `Remove filler words like "${unnecessaryWord}" to make your message more concise:`;
-                        const improvedExample = example.replace(new RegExp(`\\b${unnecessaryWord}\\b`, 'i'), '');
-                        recommendation += `<div class="example">${improvedExample}</div>`;
-                    }
-                }
-                
-                contentFeedback.push(`
-                    <li class="feedback-item warning">
-                        <div class="feedback-title">Email is too lengthy</div>
-                        <p>Your email is ${emailContent.length} characters long, which may be too detailed for effective communication.</p>
-                        ${example ? `<div class="example">${example}</div>` : ''}
-                        <div class="recommendation">
-                            <strong>Recommendation:</strong> ${recommendation}
-                        </div>
-                    </li>
-                `);
-            } else if (emailContent.length < 100) {
-                contentFeedback.push(`
-                    <li class="feedback-item warning">
-                        <div class="feedback-title">Email may be too brief</div>
-                        <p>Your email is only ${emailContent.length} characters long and may lack necessary details.</p>
-                        <div class="recommendation">
-                            <strong>Recommendation:</strong> Include more context and details about the situation.
-                        </div>
-                    </li>
-                `);
-            } else {
-                contentScore += 1;
-                contentFeedback.push(`
-                    <li class="feedback-item good">
-                        <div class="feedback-title">Appropriate email length</div>
-                        <p>Your email length (${emailContent.length} characters) is well-balanced for effective communication.</p>
-                    </li>
-                `);
-            }
+            // Create QC record
+            const qcRecord = {
+                id: Date.now(), // Unique timestamp ID
+                date: new Date().toISOString(),
+                agent: agentName,
+                totalScore: totalScore,
+                contentScore: contentScore,
+                structureScore: structureScore,
+                technicalScore: technicalScore,
+                professionalScore: professionalScore,
+                emailLength: email.length,
+                email: email.substring(0, 200) + (email.length > 200 ? '...' : '') // Save preview only
+            };
             
-            // Check for tone appropriateness
-            const negativeWords = ['angry', 'upset', 'disappointed', 'terrible', 'awful', 'horrible'];
-            const foundNegatives = negativeWords.filter(word => emailLower.includes(word));
-            const excessiveApologies = (emailLower.match(/sorry/g) || []).length > 1;
+            // Get existing data
+            let qcData = JSON.parse(localStorage.getItem('qcData')) || [];
             
-            if (foundNegatives.length > 0 || excessiveApologies) {
-                let example = '';
-                let recommendationText = '';
-                
-                if (foundNegatives.length > 0) {
-                    example = extractSnippet(new RegExp(`\\b${foundNegatives[0]}\\b`, 'i'));
-                    
-                    if (example) {
-                        const betterVersion = example.replace(
-                            new RegExp(`\\b${foundNegatives[0]}\\b`, 'i'), 
-                            foundNegatives[0] === 'disappointed' ? 'concerned' : 
-                            foundNegatives[0] === 'terrible' ? 'challenging' : 'unfortunate'
-                        );
-                        recommendationText = `
-                            Consider using more neutral language:
-                            <div class="example">${betterVersion}</div>
-                        `;
-                    }
-                } else if (excessiveApologies) {
-                    example = extractSnippet(/sorry/i);
-                    recommendationText = `
-                        Limit apologies to maintain professional confidence. Instead of repeatedly apologizing, focus on solutions:
-                        <div class="example">${example ? example.replace(/sorry/i, "I understand this situation requires attention") : ""}</div>
-                    `;
-                }
-                
-                contentFeedback.push(`
-                    <li class="feedback-item warning">
-                        <div class="feedback-title">Tone may need adjustment</div>
-                        <p>${foundNegatives.length > 0 ? `Your email contains negative terms (${foundNegatives.join(', ')})` : 'Your email contains excessive apologies'} which may affect the professional tone.</p>
-                        ${example ? `<div class="example">${example}</div>` : ''}
-                        <div class="recommendation">
-                            <strong>Recommendation:</strong> ${recommendationText}
-                        </div>
-                    </li>
-                `);
-            } else {
-                contentScore += 1;
-                contentFeedback.push(`
-                    <li class="feedback-item good">
-                        <div class="feedback-title">Professional tone maintained</div>
-                        <p>Your email maintains an appropriate professional tone throughout.</p>
-                    </li>
-                `);
-            }
+            // Add to data store
+            qcData.push(qcRecord);
             
-            // STRUCTURE ASSESSMENT (3 points)
-            let structureScore = 0;
-            let structureFeedback = [];
+            // Save to localStorage
+            localStorage.setItem('qcData', JSON.stringify(qcData));
             
-            // Check for greeting
-            const hasGreeting = /^(hi|hello|dear|good morning|good afternoon|greetings)/im.test(emailContent);
-            if (hasGreeting) {
-                const greeting = extractSnippet(/^(hi|hello|dear|good morning|good afternoon|greetings)/im);
-                structureScore += 1.5;
-                structureFeedback.push(`
-                    <li class="feedback-item good">
-                        <div class="feedback-title">Appropriate greeting included</div>
-                        <p>Your email begins with a professional greeting.</p>
-                        ${greeting ? `<div class="example">${greeting}</div>` : ''}
-                    </li>
-                `);
-            } else {
-                structureFeedback.push(`
-                    <li class="feedback-item error">
-                        <div class="feedback-title">Missing greeting</div>
-                        <p>Your email lacks a proper greeting, which can seem abrupt or impersonal.</p>
-                        <div class="recommendation">
-                            <strong>Recommendation:</strong> Start with an appropriate greeting such as:
-                            <div class="example">Hi [Recipient Name],
-
-I hope this email finds you well.</div>
-                        </div>
-                    </li>
-                `);
-            }
+            // Show a brief notification
+            const notification = document.createElement('div');
+            notification.textContent = 'QC Result Saved';
+            notification.style.position = 'fixed';
+            notification.style.bottom = '20px';
+            notification.style.right = '20px';
+            notification.style.background = '#27ae60';
+            notification.style.color = 'white';
+            notification.style.padding = '10px 20px';
+            notification.style.borderRadius = '4px';
+            notification.style.zIndex = '1000';
+            document.body.appendChild(notification);
             
-            // Check for signature/closing
-            // First look for agent name at the bottom
-            const lastLines = lines.slice(-5).join(' ').toLowerCase();
-            const hasAgentNameInSignature = lastLines.includes(agentName.toLowerCase());
-            
-            // Also check for common closings
-            const hasClosing = /(regards|sincerely|thank you|thanks|best wishes|cheers|yours truly|respectfully)/i.test(lastLines);
-            
-            if (hasAgentNameInSignature || hasClosing) {
-                structureScore += 1.5;
-                let closingExample = '';
-                
-                for (let i = lines.length - 1; i >= Math.max(0, lines.length - 5); i--) {
-                    if (lines[i].match(/(regards|sincerely|thank you|thanks|best wishes|cheers|yours truly|respectfully)/i) || 
-                        lines[i].toLowerCase().includes(agentName.toLowerCase())) {
-                        const startLine = Math.max(0, i - 1);
-                        closingExample = lines.slice(startLine, i + 2).join('\n');
-                        break;
-                    }
-                }
-                
-                structureFeedback.push(`
-                    <li class="feedback-item good">
-                        <div class="feedback-title">Professional closing included</div>
-                        <p>Your email includes a proper closing and signature.</p>
-                        ${closingExample ? `<div class="example">${closingExample}</div>` : ''}
-                    </li>
-                `);
-            } else {
-                structureFeedback.push(`
-                    <li class="feedback-item error">
-                        <div class="feedback-title">Missing signature/closing</div>
-                        <p>Your email lacks a professional closing or signature with your name.</p>
-                        <div class="recommendation">
-                            <strong>Recommendation:</strong> End your email with a proper closing:
-                            <div class="example">Kind regards,
-${agentName}
-Air Travel Claim</div>
-                        </div>
-                    </li>
-                `);
-            }
-            
-            // TECHNICAL QUALITY ASSESSMENT (2 points)
-            let technicalScore = 0;
-            let technicalFeedback = [];
-            
-            // Check for potential grammar issues (simplified check)
-            const grammarIssues = [
-                { pattern: /\s\s+/g, issue: 'multiple spaces', example: '  ' },
-                { pattern: /[,.!?][a-zA-Z]/g, issue: 'missing space after punctuation', example: 'Hello.This' },
-                { pattern: /\bi\b/g, issue: 'lowercase "i" as pronoun', example: 'i will' },
-                { pattern: /\bteh\b|\bthna\b|\byoru\b/g, issue: 'common typos', example: 'teh' }
-            ];
-            
-            const foundGrammarIssues = [];
-            
-            grammarIssues.forEach(issue => {
-                const matches = emailContent.match(issue.pattern);
-                if (matches && matches.length > 0) {
-                    // Find an actual example from the text
-                    const exampleMatch = extractSnippet(issue.pattern);
-                    foundGrammarIssues.push({
-                        issue: issue.issue,
-                        count: matches.length,
-                        example: exampleMatch || issue.example
-                    });
-                }
-            });
-            
-            if (foundGrammarIssues.length === 0) {
-                technicalScore += 1;
-                technicalFeedback.push(`
-                    <li class="feedback-item good">
-                        <div class="feedback-title">Good technical quality</div>
-                        <p>No obvious grammar or formatting issues detected.</p>
-                    </li>
-                `);
-            } else {
-                const issuesText = foundGrammarIssues.map(i => 
-                    `${i.issue} (${i.count} instance${i.count > 1 ? 's' : ''})`
-                ).join(', ');
-                
-                const examples = foundGrammarIssues.map(issue => {
-                    const correctedExample = issue.example
-                        .replace(/\s\s+/g, ' ')
-                        .replace(/([,.!?])([a-zA-Z])/g, '$1 $2')
-                        .replace(/\bi\b/g, 'I')
-                        .replace(/\bteh\b/g, 'the')
-                        .replace(/\bthna\b/g, 'than')
-                        .replace(/\byoru\b/g, 'your');
-                    
-                    return `
-                        <p><strong>Issue:</strong> ${issue.issue}</p>
-                        <p><strong>Original:</strong></p>
-                        <div class="example">${issue.example}</div>
-                        <p><strong>Corrected:</strong></p>
-                        <div class="example">${correctedExample}</div>
-                    `;
-                }).join('');
-                
-                technicalFeedback.push(`
-                    <li class="feedback-item warning">
-                        <div class="feedback-title">Technical issues found</div>
-                        <p>Found the following issues: ${issuesText}</p>
-                        <div class="recommendation">
-                            <strong>Examples and corrections:</strong>
-                            ${examples}
-                        </div>
-                    </li>
-                `);
-            }
-            
-            // Check for formatting consistency
-            const hasInconsistentCapitalization = lines.some((line, index) => {
-                if (line.length < 5) return false; // Skip short lines
-                if (index === 0) return false; // Skip first line (greeting)
-                
-                // Check if the line starts with a lowercase letter followed by text
-                return /^[a-z][a-zA-Z]/.test(line.trim());
-            });
-            
-            const hasExcessiveCapitals = /[A-Z]{5,}/.test(emailContent);
-            
-            if (!hasInconsistentCapitalization && !hasExcessiveCapitals) {
-                technicalScore += 1;
-                technicalFeedback.push(`
-                    <li class="feedback-item good">
-                        <div class="feedback-title">Consistent formatting</div>
-                        <p>Your email maintains consistent formatting and proper capitalization.</p>
-                    </li>
-                `);
-            } else {
-                let example = '';
-                let correctedExample = '';
-                
-                if (hasInconsistentCapitalization) {
-                    // Find an example of inconsistent capitalization
-                    for (let i = 0; i < lines.length; i++) {
-                        if (lines[i].length >= 5 && i > 0 && /^[a-z][a-zA-Z]/.test(lines[i].trim())) {
-                            example = lines[i];
-                            correctedExample = lines[i].charAt(0).toUpperCase() + lines[i].slice(1);
-                            break;
-                        }
-                    }
-                } else if (hasExcessiveCapitals) {
-                    // Find an example of excessive capitals
-                    const match = emailContent.match(/[A-Z]{5,}/);
-                    if (match) {
-                        const matchText = match[0];
-                        example = extractSnippet(new RegExp(matchText));
-                        correctedExample = example.replace(matchText, matchText.charAt(0) + matchText.slice(1).toLowerCase());
-                    }
-                }
-                
-                technicalFeedback.push(`
-                    <li class="feedback-item warning">
-                        <div class="feedback-title">Formatting inconsistencies</div>
-                        <p>${hasInconsistentCapitalization ? 'Some sentences lack proper capitalization.' : 'Excessive capitalization detected, which can appear as shouting.'}</p>
-                        ${example ? `
-                            <div class="example">${example}</div>
-                            <div class="recommendation">
-                                <strong>Recommendation:</strong>
-                                <div class="example">${correctedExample}</div>
-                            </div>
-                        ` : ''}
-                    </li>
-                `);
-            }
-            
-            // PROFESSIONALISM ASSESSMENT (2 points)
-            let professionalScore = 0;
-            let professionalFeedback = [];
-            
-            // Check for professional communication style
-            const unprofessionalTerms = [
-                { term: 'lol', replacement: 'I understand' },
-                { term: 'btw', replacement: 'by the way' },
-                { term: 'fyi', replacement: 'for your information' },
-                { term: 'asap', replacement: 'as soon as possible' },
-                { term: 'tbh', replacement: 'to be honest' },
-                { term: 'gonna', replacement: 'going to' },
-                { term: 'wanna', replacement: 'want to' },
-                { term: 'kinda', replacement: 'kind of' }
-            ];
-            
-            const foundUnprofessionalTerms = unprofessionalTerms.filter(item => 
-                new RegExp('\\b' + item.term + '\\b', 'i').test(emailLower)
-            );
-            
-            if (foundUnprofessionalTerms.length === 0) {
-                professionalScore += 1;
-                professionalFeedback.push(`
-                    <li class="feedback-item good">
-                        <div class="feedback-title">Professional language</div>
-                        <p>Your email uses appropriately professional language throughout.</p>
-                    </li>
-                `);
-            } else {
-                const termExamples = foundUnprofessionalTerms.map(item => {
-                    const example = extractSnippet(new RegExp('\\b' + item.term + '\\b', 'i'));
-                    if (!example) return '';
-                    
-                    const corrected = example.replace(
-                        new RegExp('\\b' + item.term + '\\b', 'i'), 
-                        item.replacement
-                    );
-                    
-                    return `
-                        <p><strong>Original:</strong></p>
-                        <div class="example">${example}</div>
-                        <p><strong>Professional alternative:</strong></p>
-                        <div class="example">${corrected}</div>
-                    `;
-                }).join('');
-                
-                professionalFeedback.push(`
-                    <li class="feedback-item error">
-                        <div class="feedback-title">Casual language detected</div>
-                        <p>Your email contains casual abbreviations or slang that may appear unprofessional: ${foundUnprofessionalTerms.map(t => t.term).join(', ')}</p>
-                        <div class="recommendation">
-                            <strong>Recommendation:</strong> Replace casual terms with their professional equivalents:
-                            ${termExamples}
-                        </div>
-                    </li>
-                `);
-            }
-            
-            // Check for customer-focused language
-            const customerFocusWords = ['you', 'your', 'we understand', 'we appreciate', 'thank you'];
-            const customerFocusCount = customerFocusWords.reduce((count, word) => {
-                const matches = emailLower.match(new RegExp('\\b' + word + '\\b', 'g'));
-                return count + (matches ? matches.length : 0);
-            }, 0);
-            
-            const selfFocusWords = ['I ', 'we ', 'our ', 'us '];
-            const selfFocusCount = selfFocusWords.reduce((count, word) => {
-                const matches = emailLower.match(new RegExp('\\b' + word + '\\b', 'g'));
-                return count + (matches ? matches.length : 0);
-            }, 0);
-            
-            if (customerFocusCount > selfFocusCount || customerFocusCount >= 3) {
-                professionalScore += 1;
-                professionalFeedback.push(`
-                    <li class="feedback-item good">
-                        <div class="feedback-title">Customer-focused communication</div>
-                        <p>Your email appropriately focuses on the customer's perspective, using language that highlights their needs and concerns.</p>
-                    </li>
-                `);
-            } else {
-                // Find an example of self-focused language to improve
-                let selfFocusExample = '';
-                for (const word of selfFocusWords) {
-                    const example = extractSnippet(new RegExp('\\b' + word + '\\b'));
-                    if (example) {
-                        selfFocusExample = example;
-                        break;
-                    }
-                }
-                
-                // Create a customer-focused alternative
-                let improvedExample = '';
-                if (selfFocusExample) {
-                    improvedExample = selfFocusExample
-                        .replace(/\bI am sending\b/i, "You're receiving")
-                        .replace(/\bWe need\b/i, "You'll need to provide")
-                        .replace(/\bI need\b/i, "Please provide")
-                        .replace(/\bOur process\b/i, "The process for your claim")
-                        .replace(/\bI can\b/i, "You can")
-                        .replace(/\bWe will\b/i, "You will receive");
-                }
-                
-                professionalFeedback.push(`
-                    <li class="feedback-item warning">
-                        <div class="feedback-title">Increase customer focus</div>
-                        <p>Your email uses more self-referential language (${selfFocusCount} instances) than customer-focused language (${customerFocusCount} instances).</p>
-                        ${selfFocusExample ? `
-                            <p><strong>Example of self-focused language:</strong></p>
-                            <div class="example">${selfFocusExample}</div>
-                            <div class="recommendation">
-                                <strong>Customer-focused alternative:</strong>
-                                <div class="example">${improvedExample}</div>
-                            </div>
-                        ` : ''}
-                        <p class="recommendation">
-                            <strong>Recommendation:</strong> Reframe statements to focus on the customer's perspective using "you" and "your" rather than "we" and "our".
-                        </p>
-                    </li>
-                `);
-            }
-            
-            // CALCULATE TOTAL SCORE
-            const totalScore = contentScore + structureScore + technicalScore + professionalScore;
-            
-            // UPDATE UI WITH SCORES
-            document.getElementById('content-score').textContent = contentScore + '/3';
-            document.getElementById('structure-score').textContent = structureScore + '/3';
-            document.getElementById('technical-score').textContent = technicalScore + '/2';
-            document.getElementById('professional-score').textContent = professionalScore + '/2';
-            document.getElementById('total-score').textContent = Math.round(totalScore);
-            
-            // UPDATE UI WITH FEEDBACK
-            document.getElementById('content-feedback').innerHTML = contentFeedback.join('');
-            document.getElementById('structure-feedback').innerHTML = structureFeedback.join('');
-            document.getElementById('technical-feedback').innerHTML = technicalFeedback.join('');
-            document.getElementById('professional-feedback').innerHTML = professionalFeedback.join('');
-            
-            // GENERATE OVERALL FEEDBACK & RECOMMENDATIONS
-            let overallFeedback = '';
-            let recommendations = '';
-            
-            // Overall assessment based on total score
-            if (totalScore >= 9) {
-                overallFeedback = `
-                    <p style="font-size: 18px; color: #27ae60; font-weight: 600;">
-                        <span style="font-size: 24px;">✓</span> Excellent email quality! 
-                    </p>
-                    <p>This email meets high professional standards and represents Air Travel Claim effectively. It's well-structured, clear, and maintains a professional tone throughout.</p>
-                `;
-            } else if (totalScore >= 7) {
-                overallFeedback = `
-                    <p style="font-size: 18px; color: #2980b9; font-weight: 600;">
-                        <span style="font-size: 24px;">→</span> Good email quality with room for improvement
-                    </p>
-                    <p>This email is generally well-written but could benefit from minor improvements in the areas highlighted below.</p>
-                `;
-            } else if (totalScore >= 5) {
-                overallFeedback = `
-                    <p style="font-size: 18px; color: #f39c12; font-weight: 600;">
-                        <span style="font-size: 24px;">⚠</span> Average email quality
-                    </p>
-                    <p>This email requires attention in several key areas before sending. Addressing the issues below will significantly improve its effectiveness.</p>
-                `;
-            } else {
-                overallFeedback = `
-                    <p style="font-size: 18px; color: #e74c3c; font-weight: 600;">
-                        <span style="font-size: 24px;">✗</span> Below standard email quality
-                    </p>
-                    <p>This email needs substantial revision before sending. Please focus on the critical areas identified below to bring it up to Air Travel Claim's communication standards.</p>
-                `;
-            }
-            
-            // Generate specific recommendations based on scores
-            let recommendationList = '<ul style="padding-left: 20px;">';
-            
-            if (contentScore < 3) {
-                recommendationList += `
-                    <li>
-                        <strong>Content:</strong> ${contentScore === 0 ? 'Thoroughly revise your content for clarity, conciseness, and tone.' : 'Make specific improvements to the content areas flagged above.'}
-                    </li>
-                `;
-            }
-            
-            if (structureScore < 3) {
-                recommendationList += `
-                    <li>
-                        <strong>Structure:</strong> ${structureScore === 0 ? 'Restructure your email to include a proper greeting and signature.' : 'Ensure your email follows proper structure with appropriate opening and closing.'}
-                    </li>
-                `;
-            }
-            
-            if (technicalScore < 2) {
-                recommendationList += `
-                    <li>
-                        <strong>Technical Quality:</strong> Proofread careful for grammar issues and ensure consistent formatting.
-                    </li>
-                `;
-            }
-            
-            if (professionalScore < 2) {
-                recommendationList += `
-                    <li>
-                        <strong>Professionalism:</strong> ${professionalScore === 0 ? 'Significantly revise your language to maintain professional standards.' : 'Adjust your language to be more professional and customer-focused.'}
-                    </li>
-                `;
-            }
-            
-            if (totalScore >= 9) {
-                recommendationList += `
-                    <li>
-                        <strong>Excellent:</strong> Continue this high standard of communication. Consider using this as a template for similar situations.
-                    </li>
-                `;
-            }
-            
-            recommendationList += '</ul>';
-            
-            recommendations = `
-                <h4 style="margin-top: 20px; color: #001689;">Key Recommendations</h4>
-                ${recommendationList}
-            `;
-            
-            document.getElementById('overall-feedback').innerHTML = overallFeedback;
-            document.getElementById('recommendations').innerHTML = recommendations;
+            setTimeout(function() {
+                notification.style.opacity = '0';
+                notification.style.transition = 'opacity 0.5s';
+                setTimeout(function() {
+                    document.body.removeChild(notification);
+                }, 500);
+            }, 2000);
         }
+        
+        // Update your QC button handler to save results
+        document.getElementById('qc-button').addEventListener('click', function() {
+            // Your existing code
+            
+            // Add this line to save the QC result after assessment
+            setTimeout(function() {
+                saveQcResult();
+            }, 500);
+        });
     </script>
 </body>
 </html>
